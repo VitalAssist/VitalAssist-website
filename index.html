@@ -4,26 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VitalAssist by Commander Tech®</title>
-  <link rel="icon" href="assets/icon.ico" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/icon.ico" />
 </head>
 <body>
   <div class="container">
-    <img src="assets/logo.png" alt="VitalAssist Logo" width="180" />
-    <h1>VitalAssist</h1>
-    <p>Your Multilingual AI Health Assistant</p>
+    <div class="header">
+      <img src="assets/logo.png" alt="VitalAssist Logo" width="180" />
+      <p class="slogan">“You are not my assistant. You are me. We are us.”</p>
+    </div>
 
-    <div class="input-section">
-      <input type="text" id="user-input" placeholder="Type your health question..." />
+    <div class="language-select">
+      <label for="language">Language:</label>
+      <select id="language">
+        <option value="auto">Auto Detect</option>
+        <option value="en">English</option>
+        <option value="ar">Arabic</option>
+        <option value="fa">Persian</option>
+        <option value="hi">Hindi</option>
+        <option value="ku">Kurdish</option>
+      </select>
+    </div>
+
+    <div class="chat-window" id="chat-window">
+      <p><strong>VitalAssist:</strong> Hello Commander, how can I assist your health today?</p>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Type your message here..." />
       <button onclick="sendMessage()">Send</button>
     </div>
 
-    <div class="chat-box" id="chat-window"></div>
-
-    <div class="actions">
+    <div class="chat-buttons">
       <button id="record-btn">🎙️ Start Recording</button>
-      <button onclick="uploadFile()">📁 Choose File</button>
-      <button onclick="getHealthTip()">💡 Get Health Tip</button>
+      <label class="file-upload">
+        📁 Choose File
+        <input type="file" id="file-input" accept=".pdf,.jpg,.png,.jpeg">
+      </label>
+      <button onclick="uploadFile()">📤 Upload</button>
+      <button onclick="getHealthTip()">💡 Health Tip</button>
     </div>
   </div>
 
