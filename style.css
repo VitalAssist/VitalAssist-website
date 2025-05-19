@@ -1,1 +1,119 @@
-body { background: linear-gradient(to bottom, #0a2540, #004d4d); font-family: sans-serif; margin: 0; padding: 0; color: white; } .container { max-width: 700px; margin: auto; padding: 20px; } .header { text-align: center; } .slogan { font-style: italic; color: #ccc; } .chat-window { background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 12px; margin-top: 20px; min-height: 120px; } .chat-buttons, .chat-input { margin-top: 15px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; } input[type='text'], input[type='file'] { padding: 10px; border-radius: 6px; border: none; width: 100%; max-width: 300px; } button { background-color: #007bff; color: white; padding: 10px; border-radius: 6px; border: none; cursor: pointer; } button:hover { background-color: #0056b3; } img { max-width: 100%; height: auto; display: block; } @media screen and (max-width: 600px) { .chat-buttons, .chat-input { flex-direction: column; align-items: stretch; } }
+body {
+  background: linear-gradient(to bottom, #0a2540, #004d4d);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header img {
+  max-width: 180px;
+}
+
+.slogan {
+  font-style: italic;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.language-select {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.language-select select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #004d4d;
+  color: white;
+  font-size: 14px;
+}
+
+.chat-window {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  min-height: 160px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.chat-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.chat-buttons button,
+.chat-buttons .file-upload {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.chat-buttons button:hover,
+.chat-buttons .file-upload:hover {
+  background-color: #0056b3;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.chat-input input[type="text"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+.chat-input button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #218838;
+}
+
+@media screen and (max-width: 600px) {
+  .chat-buttons,
+  .chat-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
