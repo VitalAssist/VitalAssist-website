@@ -29,21 +29,22 @@
       </select>
     </div>
 
-    <div class="chat-box">
-      <div class="chat-window">
-        <p><strong>VitalAssist:</strong> Hello Commander, how can I assist your health today?</p>
-      </div>
-      <div class="chat-buttons">
-        <button>Start Voice</button>
-        <input type="file" accept=".wav,.mp3">
-        <button>Upload File</button>
-        <button>Get Health Tip</button>
-      </div>
-      <div class="chat-input">
-        <input type="text" placeholder="Type your message here..." />
-        <button>Send</button>
-      </div>
+    <div class="chat-window" id="chat-window">
+      <p><strong>VitalAssist:</strong> Hello Commander, how can I assist your health today?</p>
+    </div>
+
+    <div class="chat-buttons">
+      <button onclick="startVoice()">🎤 Start Voice</button>
+      <input type="file" id="file-input" accept=".pdf,.jpg,.png,.jpeg">
+      <button onclick="uploadFile()">📤 Upload File</button>
+      <button onclick="getHealthTip()">💡 Get Health Tip</button>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Type your message here..." />
+      <button onclick="sendMessage()">Send</button>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
