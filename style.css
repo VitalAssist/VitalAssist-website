@@ -1,54 +1,50 @@
+
 body {
-  background-image: url('./assets/background.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, #0a2540, #004d4d);
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  color: white;
 }
 .container {
   max-width: 700px;
   margin: auto;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  color: white;
 }
 .header {
   text-align: center;
 }
 .slogan {
-  text-align: center;
   font-style: italic;
   color: #ccc;
 }
-.chat-box {
-  margin-top: 20px;
-}
 .chat-window {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.1);
   padding: 15px;
   border-radius: 12px;
-  min-height: 100px;
+  margin-top: 20px;
+  min-height: 120px;
 }
 .chat-buttons, .chat-input {
-  margin-top: 10px;
-  text-align: center;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
-input[type="text"], input[type="file"], select, button {
+input[type="text"], input[type="file"] {
   padding: 10px;
   border-radius: 6px;
   border: none;
-  margin: 5px;
+  width: 100%;
+  max-width: 300px;
 }
 button {
   background-color: #007bff;
   color: white;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
   cursor: pointer;
 }
 button:hover {
@@ -60,14 +56,8 @@ img {
   display: block;
 }
 @media screen and (max-width: 600px) {
-  .container, .chat-window, .chat-buttons, .chat-input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  input[type="text"], button {
-    width: 100%;
-    margin: 5px 0;
-    font-size: 1em;
+  .chat-buttons, .chat-input {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
